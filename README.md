@@ -113,4 +113,4 @@ This system can be installed in organisations to monitor employee safety and tak
 
 ## Contributions
 
-Currently, the project is not open sourced. If you would like to contribute and imrove the current system or have any suggestions, contact me at gupta.anchit.99@gmail.com
+Currently, the project is not open sourced. If you would like to contribute and improve the current system or have any suggestions, contact me at gupta.anchit.99@gmail.com
