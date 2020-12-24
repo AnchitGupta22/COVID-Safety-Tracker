@@ -4,6 +4,10 @@ The system uses DeepLearing and Machine Learning concepts like **object detectio
 
 ![output](https://github.com/AnchitGupta22/COVID-Safety-Tracker/blob/main/assets/final_project_output.gif)
 
+## Inspiration for the project
+
+Link : https://www.aboutamazon.com/news/operations/amazon-introduces-distance-assistant
+
 ## Concepts used
 
 1. Object detection using Yolo v3 to detect humans.
