@@ -45,6 +45,10 @@ Below is the flowchart for the entire system :-
       
       (ii)  Select a custom 6 feet distance for the scene, which can be the height of the tallest person in the frame or any other custom measure. The number of points will be 2.
       
+      Steps 2 (i) and (ii) are performed using mouseclick events. Below image sums up the result of Step 2 :-
+      
+      *ROI is in RED and custom 6ft distance is in green*
+      ![ROI and 6ft distance](https://github.com/AnchitGupta22/COVID-Safety-Tracker/blob/main/assets/step_2.png)
       
 3. Just after step 2, the system will generate a Bird's Eye View map of the selected ROI. It will also calculate a threshold distance on this view from step 2(ii), taking it as the required 6 feet distance.
 
