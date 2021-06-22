@@ -8,13 +8,27 @@ The system uses DeepLearing and Machine Learning concepts like **object detectio
 
 Link : https://www.aboutamazon.com/news/operations/amazon-introduces-distance-assistant
 
-## Concepts used
+## Table of contents
+
+1. [Concepts used](#1-concepts-used)
+2. [What is new in this project and how its different from the simple social distancing projects?](#2-what-is-new-in-this-project-and-how-its-different-from-the-simple-social-distancing-projects)
+3. [Input](#3-input)
+4. [Flowchart](#4-flowchart)
+5. [Working](#5-working)
+6. [Face Approximation](#6-face-approximation)
+7. [Metrics for the Face Mask Detection model](#7-metrics-for-the-face-mask-detection-model)
+8. [Application](#8-application)
+9. [Improvements](#9-improvements)
+10. [Project requirements](#10-project-requirements)
+11. [Contributions](#11-contributions)
+
+## 1. Concepts used
 
 1. Object detection using Yolo v3 to detect humans.
 
 2. CNN for Face Mask detection. Current input size for the system is 48x48px.
 
-## What is new in this project and how its different from the simple social distancing projects?
+## 2. What is new in this project and how its different from the simple social distancing projects?
 
 This project includes concepts like perspective transformation to eliminate almost all errors while performing **social distancing tracking**.
 By using this concept, the depth factor of the video is eliminated and hence, the distance between each object is calculated more accurately.
@@ -23,19 +37,19 @@ At the same time, it also performs **mask detection** which adds to the system's
 
 It also generates a simple dashboard depicting the stats of the above two mentioned norms. The stats include - **Total people**, **Violators** and **Non-violators**. The dashboard is created using user-defined functions using OpenCV functionalities.
 
-## Input
+## 3. Input
 
 The input can be either a pre-recorded or live video feed from a cctv camera. 
 
 *Necessary changes in the code can be done accordingly*
 
-## Flowchart 
+## 4. Flowchart 
 
 Below is the flowchart for the entire system :-
 
 ![flowchart](https://github.com/AnchitGupta22/COVID-Safety-Tracker/blob/main/assets/flowchart_main.PNG)
 
-## Working
+## 5. Working
 
 1. The system reads the video feed using **OpenCV**.
 
@@ -60,7 +74,7 @@ Below is the flowchart for the entire system :-
       
       (iii)   Generate the dashboard with two graphs, one for Social Distancing Tracking and another for Mask Detection. Use the stats from step 4(i) and ste 4(ii) to populate the two graphs.
       
-## Face Approximation
+## 6. Face Approximation
 
 Since the test video feed isn't of very good quality, and its recorded from a very great height, the faces in the feed aren't of a great size. The size was too small to perform **Face Detection** using either Yolo v3 or Haarcascading. Therefore, a temporary solution was to assume that our body consists of five equal parts, and that our face is in the top most part out of these five parts. Hence, accordingly our face will be in the top 20% of the bounding box generated in object detection.
 
@@ -70,7 +84,7 @@ Given below is an illustartion :-
 
 For the current system, the value is taken to be 24% or 0.24.
 
-## Metrics for the Face Mask Detection model
+## 7. Metrics for the Face Mask Detection model
 
 ```Input size``` for the model is taken to be 48x48px. 
 
@@ -79,11 +93,11 @@ Accuracy Graph             |  Loss Graph
 ![](https://github.com/AnchitGupta22/COVID-Safety-Tracker/blob/main/assets/acc_graph.PNG)  |  ![](https://github.com/AnchitGupta22/COVID-Safety-Tracker/blob/main/assets/loss_graph.PNG)
 
 
-## Application
+## 8. Application
 
 This system can be installed in organisations to monitor employee safety and take necessary steps accordingly. For example, it can be installed in schools and colleges to ensure everyone is following the specified norms.
 
-## Improvements
+## 9. Improvements
 
 1. The current project setup uses only one camera which allows us to succesfully monitor social distancing. But mask detection is a little error prone due to the height of the camera and its distance from the ROI. A better setup would be to use two cameras where the lower one can be used to detect masks whereas the one above it at a much greater height can be used to track social distancing, as depicted in the below diagram.
 
@@ -95,7 +109,7 @@ This system can be installed in organisations to monitor employee safety and tak
 
 4. Flask based interactive application can also be created.
 
-## Project requirements
+## 10. Project requirements
 
 1. matplotlib==3.0.0
 
@@ -115,6 +129,6 @@ This system can be installed in organisations to monitor employee safety and tak
 
 9. skimage==0.0
 
-## Contributions
+## 11. Contributions
 
 Currently, the project is not open sourced. If you would like to contribute and improve the current system or have any suggestions, contact me at gupta.anchit.99@gmail.com
